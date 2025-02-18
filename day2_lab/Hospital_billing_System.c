@@ -12,9 +12,10 @@ int main() {
     // Input patient details
     printf("Enter Patient Name: ");
     scanf("%s",patientName);
+    
     printf("Enter Ward Type (G/S/P): ");
-    scanf(" %c", &wardType); // Space before %c to consume any newline character
-
+    scanf(" %c", &wardType);
+    
     printf("Enter Number of Days: ");
     scanf("%d", &days);         
 
@@ -62,8 +63,7 @@ float calculateBill(char wardType, int days) {
             rate = 5000.0; // Private
             break;
         default:
-            printf("Invalid Ward Type! Defaulting to General Ward.\n");
-            rate = 1000.0; // Default to General Ward if invalid input
+            printf("Invalid Ward Type! Try again !.\n");
             break;
     }
 
